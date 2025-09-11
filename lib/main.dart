@@ -3,11 +3,11 @@ import 'package:clean_architecture_bloc/features/auth/presentation/screens/login
 import 'package:clean_architecture_bloc/features/products/presentation/bloc/product_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'core/di/service_locator.dart' as di;
+import 'service_locator.dart' as di;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  di.init(); // Initialize your dependencies
+  di.init(); 
   runApp(const MyApp());
 }
 
@@ -23,12 +23,12 @@ class MyApp extends StatelessWidget {
       ],
       child: const CupertinoApp(
         debugShowCheckedModeBanner: false,
-        title: 'Social App',
+        title: 'Ecommerce App',
         theme: CupertinoThemeData(
           brightness: Brightness.light,
           primaryColor: CupertinoColors.activeBlue,
         ),
-        home: AppleLoginPage(),
+        home: LoginPage(),
       ),
     );
   }
