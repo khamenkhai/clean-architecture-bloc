@@ -40,6 +40,7 @@ void init() {
 
     return dio;
   });
+  
   sl.registerLazySingleton<ApiClient>(() => ApiClient(sl<Dio>()));
 
   // -----------------------------
@@ -67,8 +68,7 @@ void init() {
     () => AuthRepositoryImpl(remoteDataSource: sl<AuthRemoteDataSource>()),
   );
   sl.registerLazySingleton(
-    () =>
-        ProductRepositoryImpl(remoteDataSource: sl<ProductRemoteDatasource>()),
+    () => ProductRepositoryImpl(remoteDataSource: sl<ProductRemoteDatasource>()),
   );
 
   // -----------------------------
